@@ -1,0 +1,6 @@
+<%= render "layouts/navbar" %>
+<% if logged_in? %>
+<%= render "layouts/dogshow" %>
+ <% else %>
+<%= render "layouts/dogimg" %>
+ <% end%>

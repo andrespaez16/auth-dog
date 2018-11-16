@@ -1,0 +1,18 @@
+ <% if logged_in? %>
+
+
+  <% else %>
+
+<div class="container">
+  <div class="row">
+    <div class="col m-5 p-5 " >
+      <p class="display-4">El mejor lugar <br> para tu mejor amigo.</p>
+             <p class="display-4 font-weight-bold ">Tráelo ya!</p>
+        <p>Revisa el estado de tu perro<a class="font-weight-bold" href="/login"> Aquí.</a></p>
+    </div>
+    <div class="col  p-2  m-3 ">
+        <%= image_tag("shiba.jpg", width: 450 ) %>
+        
+    </div>     
+</div>
+ <% end %>

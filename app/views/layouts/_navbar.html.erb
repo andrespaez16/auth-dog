@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="/">
+    <img src="https://image.flaticon.com/icons/png/512/22/22744.png" width="30" height="30" class="d-inline-block align-top"  alt="">
+          Guardería de Perros.
+  </a>
+  
+  <ul class="nav justify-content-end">
+  <% if logged_in? %>
+  <li class="nav-item">
+    <a class="nav-link active" href="/about">Nosotros</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/team">Equipo</a>
+  </li>
+   <li class="nav-item">
+   <%= link_to 'Cerrar sesión', logout_path, :method => :delete, :class =>"nav-link  btn btn-outline-primary"  %>
+  </li>
+  <% else %>
+   <li class="nav-item">
+    <a class="nav-link " href="/signup">Registrar Perro</a>
+  </li>
+  <li class="nav-item">
+ <%# link_to 'Iniciar perro', login_path, class: "nav-link btn btn-outline-success" %>
+    <a class="nav-link btn btn-outline-primary" href="/login">Revisar Perro</a>
+  </li>
+  <% end %>
+</ul>
+</nav>
+

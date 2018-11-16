@@ -1,0 +1,27 @@
+<%= render "layouts/navbar" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col m-5 col-md-5 col-md-offset-4 ">
+        <h1>Registrar caníno</h1>
+        <%= form_for(@dog, url: signup_path) do |f| %>
+          <%= f.label :"Ingresa el nombre del can" %>
+          <%= f.text_field :name, class: 'form-control' %>
+          <%= f.label :"Ingresa la imagen de tu perro " %>
+          <%= f.text_field :img_url, class: 'form-control' %>
+          <%= f.label :"Ingresa una contraseña" %>
+          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.label :"Vuelve a ingresar la contraseña", "Confirmation" %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <br>
+          <%= f.submit "Crear Perro", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+    <div class="col">
+      <div class="p-2 m-3">
+        <%= image_tag("dog1.png", height: 400 ) %>
+      </div> 
+    </div>
+  </div>
+</div>
+      
